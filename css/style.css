@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat');
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p, li {
+    font-family: 'EB Garamond', serif;
+    color: rgb(51, 51, 51);
+}
+
+main h2 {
+    border-top: 6px solid;
+    border-bottom: 2px solid;
+    border-color: lightgray;
+}
+
+a:link { color: blue; }          /* Unvisited links */
+a:visited { color: purple; }     /* Visited links */
+a:hover { background: yellow; }  /* Hovered links */
+a:active { color: red; }         /* Active links */
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    background-color: rgb(244, 244, 244);
+}
+
+header {
+    /* background-color: powderblue; */
+    display: grid;
+    grid-column: col 2 / span 1;
+    grid-gap: 20px;
+}
+
+header div {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+header ul {
+    list-style-position: inside;
+}
+
+.contact {
+    list-style: none;
+    margin: 0 auto;
+    min-width: 80px;
+}
+
+.contact li {
+    display: flex;
+    align-items: center;
+}
+
+.contact li:nth-child(1):before {
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: url('../img/_ionicons_svg_md-mail.svg');
+    margin-right: 4px;
+}
+
+.contact li:nth-child(2):before {
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: url('../img/_ionicons_svg_md-pin.svg');
+    margin-right: 4px;
+}
+
+.social_media {
+    display: inline-flex;
+    list-style-type: none;
+}
+
+.social_media li img {
+    height: 30px;
+    width: 30px;
+    margin-right: 1em;
+}
+
+#self_portrait {
+    width: 200px;
+    height: 200px;
+    grid-row: 1;
+    grid-column: 2;
+    border-radius: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    header div {
+        grid-row: 2;
+        grid-column: 1;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    #self_portrait {
+        width: 200px;
+        height: 200px;
+        grid-row: 1;
+        grid-column: 1;
+        margin: 0 auto;
+        display: block;
+    }
+ }
+
+#proficiencies ul {
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+#proficiencies li {
+    display: inline-block;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 6px;
+    font-weight: bold;
+    background-color: powderblue;
+    border-radius: 15px;
+}
+
+footer {
+    padding: 30px;
+}
+
+footer * {
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+}
